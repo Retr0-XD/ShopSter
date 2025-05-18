@@ -11,4 +11,5 @@ sleep 5
 # Build and run the Spring Boot application
 echo "Building and running Spring Boot application..."
 cd spring-boot-backend
-./mvnw spring-boot:run
+mvn clean install -DskipTests
+java -jar target/spring-boot-backend-0.0.1-SNAPSHOT.jar
