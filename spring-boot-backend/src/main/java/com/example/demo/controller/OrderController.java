@@ -1,5 +1,6 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.OrderSummaryDTO;
 import com.example.demo.model.Order;
 import com.example.demo.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,5 +42,17 @@ public class OrderController {
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteOrder(@PathVariable Long id) {
         return orderService.deleteOrder(id) ? ResponseEntity.noContent().build() : ResponseEntity.notFound().build();
+    }
+    
+    @GetMapping("/customer/{customerId}")
+    public List<Order> getOrdersByCustomerId(@PathVariable Long customerId) {
+        return orderService.getOrdersByCustomerId(customerId);
+    }
+    
+    @GetMapping("/{id}/summary")
+    public ResponseEntity<OrderSummaryDTO> getOrderSummary(@PathVariable Long id) {
+        return orderService.getOrderSummary(id)
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 }

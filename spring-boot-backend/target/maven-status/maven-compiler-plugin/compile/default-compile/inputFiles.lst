@@ -4,6 +4,7 @@
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/controller/CustomerController.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/service/EntityService.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/controller/OrderController.java
+/workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/dto/OrderSummaryDTO.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/repository/EmployeeRepository.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/service/EmployeeService.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/controller/CategoryController.java
@@ -27,6 +28,7 @@
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/repository/PaymentRepository.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/service/CustomerService.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/service/PaymentService.java
+/workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/controller/SetupController.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/model/Customer.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/model/Employee.java
 /workspaces/ShopSter/spring-boot-backend/src/main/java/com/example/demo/config/OpenApiConfig.java

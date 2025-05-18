@@ -20,12 +20,15 @@ com/example/demo/repository/EmployeeRepository.class
 com/example/demo/service/EntityService.class
 com/example/demo/model/Customer.class
 com/example/demo/controller/ApiController.class
+com/example/demo/dto/OrderSummaryDTO.class
 com/example/demo/controller/CategoryController.class
 com/example/demo/repository/PaymentRepository.class
 com/example/demo/repository/CustomerRepository.class
 com/example/demo/service/CustomerService.class
 com/example/demo/service/EmployeeService.class
 com/example/demo/service/PaymentService.class
+com/example/demo/controller/SetupController.class
 com/example/demo/repository/ProductRepository.class
+com/example/demo/config/DataInitializer.class
 com/example/demo/controller/OrderController.class
 com/example/demo/controller/EmployeeController.class

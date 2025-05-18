@@ -43,4 +43,12 @@ public class ProductService {
         }
         return false;
     }
+    
+    public List<Product> getProductsByCategory(String category) {
+        return productRepository.findByCategory(category);
+    }
+    
+    public List<Product> searchProductsByName(String searchTerm) {
+        return productRepository.searchByName(searchTerm);
+    }
 }
