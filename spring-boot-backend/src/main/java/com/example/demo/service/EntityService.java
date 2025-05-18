@@ -1,6 +1,6 @@
 package com.example.demo.service;
 
-import com.example.demo.model.Entity;
+import com.example.demo.model.BaseEntity;
 import com.example.demo.repository.EntityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,19 +18,32 @@ public class EntityService {
         this.entityRepository = entityRepository;
     }
 
-    public List<Entity> findAll() {
+    public List<BaseEntity> getAllEntities() {
         return entityRepository.findAll();
     }
 
-    public Optional<Entity> findById(Long id) {
-        return entityRepository.findById(id);
+    public BaseEntity getEntityById(Long id) {
+        return entityRepository.findById(id).orElse(null);
     }
 
-    public Entity save(Entity entity) {
+    public BaseEntity createEntity(BaseEntity entity) {
         return entityRepository.save(entity);
     }
 
-    public void deleteById(Long id) {
-        entityRepository.deleteById(id);
+    public BaseEntity updateEntity(Long id, BaseEntity entity) {
+        return entityRepository.findById(id)
+            .map(existingEntity -> {
+                entity.setId(id);
+                return entityRepository.save(entity);
+            })
+            .orElse(null);
+    }
+
+    public boolean deleteEntity(Long id) {
+        if (entityRepository.existsById(id)) {
+            entityRepository.deleteById(id);
+            return true;
+        }
+        return false;
     }
 }
